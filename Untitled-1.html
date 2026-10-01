@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coba klik siapa tau dapet jodoh😈</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      background: #111;
+      color: white;
+      padding-top: 100px;
+    }
+
+    #btn {
+      padding: 15px 30px;
+      font-size: 20px;
+      cursor: pointer;
+      position: absolute;
+      transition: 0.15s;
+    }
+
+    #hasil {
+      font-size: 25px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🧠 Coba klik siapa tau dapet jodoh</h1>
+  <p>Tekan tombol ini 10 kali untuk menang!</p>
+
+  <button id="btn" onclick="klik()">KLIK AKU</button>
+
+  <div id="hasil"></div>
+
+  <script>
+    let jumlah = 0;
+    const btn = document.getElementById("btn");
+    const hasil = document.getElementById("hasil");
+
+    function klik() {
+      jumlah++;
+
+      if (jumlah < 10) {
+        hasil.innerText = "Progress: " + jumlah + "/10 😏";
+
+        btn.style.left = Math.random() * 80 + "%";
+        btn.style.top = Math.random() * 80 + "%";
+      } else {
+        btn.style.display = "none";
+        hasil.innerText = "Mau aja di suruh suruh hahaha";
+      }
+    }
+  </script>
+
+</body>
+</html>
